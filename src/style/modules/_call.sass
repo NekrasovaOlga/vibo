@@ -1,0 +1,83 @@
+.call
+    .content
+        background: url('../img/call__bg.png') no-repeat
+        background-size: 692px
+        background-position: right top
+        padding-bottom: 116px
+    &__title
+        font-weight: 400
+        font-size: 30px
+        color: $gray
+        width: 470px
+    &__description
+        margin: 20px 0
+        width: 305px
+        font-weight: 500
+        color: $gray
+    &__phone
+        position: relative
+        &-input
+            width: 389px
+            height: 70px
+            background: #FFFFFF
+            border: 1px solid rgba(250, 250, 250, 0.165952)
+            box-shadow: inset 0px 1px 4px rgba(193, 203, 202, 0.3528)
+            border-radius: 7px
+            margin-bottom: 40px
+            padding: 0 105px 0 120px
+            letter-spacing: 1px
+            color: #636365
+            position: relative
+            z-index: 2
+    &__icon
+        position: absolute
+        background: #FFE600 url('../img/phone.png')no-repeat
+        background-position: center center
+        border-radius: 50px
+        width: 32px
+        height: 32px
+        top: 50%
+        transform: translateY(-50%)
+        left: 20px
+        z-index: 9
+        &::after
+            position: absolute
+            content: ''
+            width: 1px
+            height: 24.5px
+            background: #F0F0F0
+            left: 54px
+            top: 50%
+            transform: translateY(-50%)
+
+@media screen and (max-width:1280px)
+    .call
+        .content
+            background-size: 442px
+            background-position: right center
+@media screen and (max-width:961px)
+    .call
+        &__title
+            width: 363px
+        .content
+            background-size: 362px
+            background-position: right top
+            padding-bottom: 0
+        &__phone
+            &-input
+                margin-top: 20px
+                width: 364px
+                padding-right: 80px
+
+@media screen and (max-width:770px)
+    .call
+        .content
+            background-size: contain
+            padding-top: 252px
+        &__phone
+            &-input
+                margin-top: 0
+                margin-bottom: 20px
+                width: 100%
+        &__button
+            margin: 0 auto

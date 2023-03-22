@@ -1,0 +1,59 @@
+.questions
+    &__button
+        margin: 0 auto
+    &__items
+        margin-bottom: 40px
+    &__item
+        position: relative
+        padding: 40px 0
+        border-bottom: 0.9px solid #DDDDDD
+        position: relative
+        transition: height 0.5s ease-in-out
+        &.active
+            .questions__item-description
+                padding-top: 20px
+                visibility: visible
+                opacity: 1
+            .questions__item-title
+                &:after
+                    transform: rotate(0)
+        &-title
+            font-weight: bold
+            font-size: 18px
+            color: $gray
+            cursor: pointer
+            max-width: 745px
+            width: 100%
+            &:after
+                position: absolute
+                top: 32px
+                right: 0
+                content: ''
+                width: 36.9px
+                height: 36.93px
+                background: #FFE600 url('../img/arrow.png')no-repeat
+                background-size: 13px
+                background-position: center center
+                box-shadow: 0px 5px 11px rgba(240, 216, 211, 0.800395)
+                border-radius: 50px
+                transform: rotate(180deg)
+                transition: 0.5s ease-in-out
+        &-description
+            font-weight: 300
+            color: $gray
+            visibility: hidden
+            height: 0
+            opacity: 0
+            transition: 0.5s ease-in-out
+
+@media screen and (max-width:961px)
+    .questions
+        &__item
+            &-title
+                max-width: 509px
+@media screen and (max-width:770px)
+    .questions
+        &__item
+            &-title
+                max-width: 241px
+                font-size: 14px

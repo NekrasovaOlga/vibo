@@ -1,0 +1,57 @@
+.hero
+    padding-top: 66px
+    padding-bottom: 119px
+    background-image: url('../img/hero/bg.png')
+    background-position: right center
+    background-size: contain
+    background-repeat: no-repeat
+.title
+    font-weight: 400
+    font-size: 61px
+    color: $color__1
+    width: 653px
+.description
+    font-weight: 400
+    line-height: 26px
+    color: $black
+    margin: 40px 0
+    width: 561px
+
+@media screen and (max-width:1280px)
+    .hero
+        background-size: auto
+        background-position: right -250px center
+    .title
+        font-size: 51px
+        width: 519px
+    .description
+        width: 501px
+
+@media screen and (max-width:961px)
+    .hero
+        padding-bottom: 425px
+        margin-bottom: 74px
+        background-size: auto
+        background-position: right -250px bottom
+    .title
+        font-size: 48px
+        width: 616px
+    .description
+        width: 413px
+
+@media screen and (max-width:770px)
+    .title
+        width: 100%
+        font-size: 35px
+        text-align: center
+        margin-bottom: 20px
+    .description
+        display: none
+    .hero
+        padding-bottom: 310px
+        margin-bottom: 40px
+        background-image: url('../img/hero/bg__mobile.png')
+        background-size: 442px
+        background-position: bottom center
+        &__button
+            margin: 0 auto

@@ -1,0 +1,117 @@
+.advantages
+    &__block
+        padding-top: 40px
+        &-items
+            display: grid
+            grid-template-rows: 1fr
+            gap: 20px
+            &__2
+                grid-template-columns: repeat(2, 1fr)
+                .advantages__item
+                    height: 368px
+                    padding: 30px 42px
+                    &:nth-child(1)
+                        background: #4F4F4F url('../img/advantages/item_1.png')
+                        background-repeat: no-repeat
+                        background-position: center bottom
+                        .advantages__item-title, .advantages__item-desciption
+                            color: #FFFFFF
+                    &:nth-child(2)
+                        color: #2B291F
+                        background: #EAECEF url('../img/advantages/item_2.png')
+                        background-repeat: no-repeat
+                        background-position: center bottom -20px
+            &__3
+                grid-template-columns: repeat(3, 1fr)
+                padding-top: 20px
+                .advantages__item
+                    height: 366px
+                    &:nth-child(1)
+                        padding: 30px 33px
+                        background: rgba(239, 234, 187, 0.6) url('../img/advantages/item_3.png')
+                        background-repeat: no-repeat
+                        background-position: center bottom
+                    &:nth-child(2)
+                        padding: 29px 23px
+                        background: #EEE9E8 url('../img/advantages/item_4.png')
+                        background-repeat: no-repeat
+                        background-position: center bottom
+                    &:nth-child(3)
+                        padding: 30px 20px
+                        background: #FFF9C1 url('../img/advantages/item_5.png')
+                        background-repeat: no-repeat
+                        background-position: center bottom
+    &__item
+        padding: 30px 22px
+        background-repeat: no-repeat
+        border-radius: 24px
+        &-title
+            font-weight: 400
+            font-size: 24px
+            margin-bottom: 30px
+            color: #2B291F
+        &-desciption
+            font-weight: 400
+            color: #6E6E6E
+
+@media screen and (max-width:961px)
+    .advantages
+        &__block
+            &-items
+                &__2
+                    .advantages__item
+                        height: 239px
+                        padding: 30px 42px
+                        &:nth-child(1)
+                            background-position: right bottom
+                            background-size: 211px
+                        &:nth-child(2)
+                            background-position: center bottom -20px
+                            background-size: 322px
+                &__3
+                    .advantages__item
+                        height: 237px
+                        &:nth-child(1)
+                            background-position: right bottom
+                            background-size: 161px
+                        &:nth-child(2)
+                            background-position: center bottom
+                            background-size: contain
+                        &:nth-child(3)
+                            background-position: right bottom
+                            background-size: 131px
+        &__item
+            &-title
+                font-size: 18px
+                margin-bottom: 20px
+            &-desciption
+                font-size: 12px
+
+@media screen and (max-width:770px)
+    .advantages
+        &__block
+            padding-top: 20px
+            &-items
+                &__2
+                    grid-template-columns: repeat(1, 1fr)
+                    .advantages__item
+                        height: 225px
+                        &:nth-child(1)
+                            background-size: 241px
+                &__3
+                    grid-template-columns: repeat(1, 1fr)
+                    .advantages__item
+                        height: 225px
+                        &:nth-child(1)
+                            background-position: right bottom
+                            background-size: 194px
+                        &:nth-child(2)
+                            background-position: center bottom
+                            background-size: 311px
+                        &:nth-child(3)
+                            background-position: right bottom
+                            background-size: 180px
+        &__item
+            &-title
+                font-size: 18px
+                margin-bottom: 4px

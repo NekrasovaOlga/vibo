@@ -1,0 +1,68 @@
+.coworking
+    &__description
+        font-size: 20px
+        max-width: 805px
+        margin: 20px 0 40px
+        color: $gray
+    &__items
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        grid-column-gap: 20px
+        grid-row-gap: 20px
+    &__item
+        display: flex
+        background: #F2F2F2
+        border-radius: 16px
+        height: 180px
+        padding: 30px
+        position: relative
+        &-block
+            margin-left: 20px
+        &-title
+            font-weight: 400
+            font-size: 22px
+            color: $gray
+        &-description
+            font-weight: 300
+            color: $gray
+            margin-top: 20px
+        &::after
+            position: absolute
+            content: attr(data-id)
+            font-weight: 400
+            font-size: 64px
+            color: rgba(120, 120, 120, 0.04)
+            bottom: 0
+            right: 20px
+
+@media screen and (max-width:1280px)
+    .coworking
+        &__item
+            padding-right: 3px
+            &-title
+                font-size: 16px
+            &-description
+                font-size: 14px
+
+@media screen and (max-width:961px)
+    .coworking
+        &__description
+            font-size: 16px
+        &__items
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+        &__item
+            padding-right: 86px
+@media screen and (max-width:770px)
+    .coworking
+        &__description
+            font-size: 14px
+            margin-bottom: 20px
+        &__items
+            display: grid
+            grid-template-columns: repeat(1, 1fr)
+        &__item
+            padding-right: 10px
+            &-title
+                font-size: 20px

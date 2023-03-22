@@ -1,0 +1,32 @@
+.space
+    .content
+        display: flex
+        align-items: center
+    &__images
+        img
+            width: 662px
+    &__description
+        font-weight: 400
+        padding: 20px 0
+
+@media screen and (max-width:1280px)
+    .space
+        &__images
+            img
+                width: 370px
+
+@media screen and (max-width:961px)
+    .space
+        &__images
+            margin-right: 53px
+            img
+                width: 294px
+
+@media screen and (max-width:770px)
+    .space
+        .content
+            flex-direction: column-reverse
+        &__images
+            margin-right: 0
+            img
+                width: 100%

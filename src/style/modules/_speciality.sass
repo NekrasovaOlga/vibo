@@ -1,0 +1,72 @@
+.speciality
+    .content
+        display: flex
+        justify-content: space-between
+    &__description
+        font-weight: 400
+        font-size: 20px
+        margin: 20px 0 40px
+        max-width: 482px
+        color: $gray
+    &__list
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        grid-template-rows: repeat(2, 1fr)
+        grid-column-gap: 20px
+        grid-row-gap: 20px
+        &-item
+            &__title
+                font-weight: 400
+                font-size: 25px
+                color: $gray
+                margin-top: 20px
+                padding-bottom: 5px
+                position: relative
+                &:after
+                    position: absolute
+                    content: ''
+                    width: 39.19px
+                    height: 1px
+                    background: $color__2
+                    bottom: 0
+                    left: 0
+
+@media screen and (max-width:1280px)
+    .speciality
+        &__description
+            max-width: 362px
+        &__list
+            &-item
+                &__image
+                    width: 211px
+
+@media screen and (max-width:961px)
+    .speciality
+        &__description
+            max-width: 307px
+            font-size: 14px
+        &__list
+            &-item
+
+                &__image
+                    width: 174px
+                &__title
+                    font-size: 19px
+@media screen and (max-width:770px)
+    .speciality
+        &__description
+            margin-bottom: 20px
+            max-width: 100%
+        .content
+            flex-direction: column
+            padding-bottom: 75px
+        &__list
+            &-item
+
+                &__image
+                    width: 168px
+        &__button
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)

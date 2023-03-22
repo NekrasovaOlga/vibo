@@ -1,0 +1,59 @@
+.seo
+    &__content
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 122px
+    &__description
+        font-weight: 400
+        color: $gray
+        margin: 20px 0
+        max-width: 386px
+.layout
+    margin-bottom: 100px
+
+    .content
+        background: #F2F2F2 url('../img/blueprint.png')no-repeat
+        background-position: right top
+        padding: 81px 102px
+    &__title
+        width: 517px
+        color: #807F7F
+        margin-bottom: 20px
+
+@media screen and (max-width:1280px)
+    .seo
+        &__img
+            img
+                width: 442px
+    .layout
+        .content
+            padding: 115px 63px
+            background-position: right -150px top
+        &__title
+            width: 435px
+            font-size: 32px
+@media screen and (max-width:961px)
+    .seo
+        &__content
+            gap: 22px
+        &__img
+            img
+                width: 364px
+    .layout
+        .content
+            padding: 39px 43px
+            background-position: right top
+            background-size: contain
+        &__title
+            width: 349px
+            font-size: 29px
+@media screen and (max-width:770px)
+    .seo
+        &__content
+            grid-template-columns: repeat(1, 1fr)
+    .layout
+        .content
+            padding: 262px 12px 20px 18px
+        &__title
+            font-size: 24px
+            width: 100%

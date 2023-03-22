@@ -1,0 +1,68 @@
+.price
+    &__description
+        font-weight: 400
+        font-size: 18px
+        color: #363348
+        padding-top: 20px
+        padding-bottom: 40px
+        width: 770px
+    &__block
+        &-item
+            padding: 44px 45px 43px 45px
+            background: #FFFFFF
+            box-shadow: 0px 4px 42px rgba(0, 0, 0, 0.04)
+            border-radius: 24px
+            position: relative
+            margin-right: 20px
+            &__title
+                font-size: 25px
+                line-height: 32px
+                color: $gray
+                font-weight: 400
+            &__adress
+                margin: 20px 0 10px 0
+                font-weight: 700
+                line-height: 26px
+            &__button
+                width: 223px
+                height: 55px
+                margin: 0 auto
+                margin-top: 49px
+        &-data
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-bottom: 5px
+            height: 40px
+
+            &__long
+                justify-content: flex-start
+                .price__block-data__label
+                    margin-left: 43px
+            &__time
+                font-weight: 700
+                color: $gray
+            &__cell
+                font-weight: 400
+                font-size: 33px
+                text-transform: uppercase
+                color: $gray
+            &__label
+                padding: 0 20px
+                background: #BFBFBF
+                border-radius: 4px
+                font-weight: 700
+                color: #FFFFFF
+            &__clue
+                position: absolute
+                bottom: 108px
+
+@media screen and (max-width:961px)
+    .price
+        &__description
+            width: 582px
+@media screen and (max-width:770px)
+    .price
+        &__description
+            width: 100%
+            font-size: 14px
