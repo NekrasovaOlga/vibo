@@ -327,8 +327,9 @@ body {
   position: relative;
 }
 
-input {
+input, textarea {
   outline: none;
+  border: none;
 }
 
 ul, li {
@@ -400,6 +401,14 @@ button {
   }
   .margin__bottom-100 {
     margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 354px) {
+  .content {
+    max-width: 90%;
+  }
+  .button {
+    width: 90%;
   }
 }
 .header {
@@ -787,9 +796,27 @@ button {
   }
 }
 @media screen and (max-width: 770px) {
+  .price__block-item {
+    padding: 24px 25px 23px 25px;
+    margin-bottom: 27px;
+  }
   .price__description {
     width: 100%;
     font-size: 14px;
+  }
+}
+@media screen and (max-width: 372px) {
+  .price__block-item__title {
+    font-size: 18px;
+  }
+  .price__block-item__button {
+    width: 95%;
+  }
+  .price__block-data__cell {
+    font-size: 18px;
+  }
+  .price__block-data__long .price__block-data__label {
+    margin-left: 13px;
   }
 }
 .speciality .content {
@@ -858,7 +885,7 @@ button {
     padding-bottom: 75px;
   }
   .speciality__list-item__image {
-    width: 168px;
+    width: 100%;
   }
   .speciality__button {
     position: absolute;
@@ -948,6 +975,20 @@ button {
   }
   .coworking__item-title {
     font-size: 20px;
+  }
+}
+@media screen and (max-width: 354px) {
+  .coworking__item {
+    padding-right: 0;
+  }
+  .coworking__item-block {
+    margin-left: 10px;
+  }
+  .coworking__item-title {
+    font-size: 18px;
+  }
+  .coworking__item-image img {
+    width: 28px;
   }
 }
 .booking .content {
@@ -1150,6 +1191,18 @@ button {
     margin: 0 auto;
   }
 }
+@media screen and (max-width: 354px) {
+  .call .content {
+    padding-top: 202px;
+  }
+  .call__title {
+    width: 100%;
+    font-size: 22px;
+  }
+  .call__description {
+    width: 100%;
+  }
+}
 .seo__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1209,6 +1262,9 @@ button {
 @media screen and (max-width: 770px) {
   .seo__content {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .seo__img img {
+    width: 100%;
   }
   .layout .content {
     padding: 262px 12px 20px 18px;
@@ -1299,4 +1355,108 @@ button {
   .contact__map img {
     width: 100%;
   }
+}
+.overflow {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background: rgba(217, 217, 217, 0.35);
+  backdrop-filter: blur(8px);
+  transition: opacity 0.3s ease-in-out;
+}
+.overflow.active {
+  opacity: 1;
+  height: 100vh;
+}
+.overflow.active .modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 354px;
+  min-height: 408px;
+  background: #F2F2F2;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.14);
+  border-radius: 23px;
+  padding: 70px 57px;
+}
+.overflow.active .modal__title {
+  font-weight: 400;
+  font-size: 21px;
+  text-align: center;
+}
+.overflow.active .modal__button {
+  width: 100%;
+}
+.overflow.active .modal__phone {
+  position: relative;
+  display: block;
+}
+.overflow.active .modal__phone-link {
+  position: relative;
+  font-size: 21px;
+  padding-left: 51px;
+  line-height: 35px;
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+}
+.overflow.active .modal__phone-link::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #FFE600 url(../img/phone.png) no-repeat;
+  background-position: center center;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+.overflow.active .modal__phone-input {
+  width: 100%;
+  font-size: 15px;
+  padding: 24px 15px 24px 74px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.overflow.active .modal__icon::after {
+  left: 43px;
+}
+.overflow.active .modal__close {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+.overflow.active .modal__description {
+  color: #807F7F;
+  text-align: center;
+  margin: 15px 0;
+}
+.overflow.active .modal__textarea {
+  display: none;
+  width: 240px;
+  height: 80px;
+  background: #FFFFFF;
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  resize: none;
+}
+.overflow.active .modal__social {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+.overflow.active .modal__social-telegram {
+  margin-right: 22px;
+}
+.overflow.active .modal__success {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

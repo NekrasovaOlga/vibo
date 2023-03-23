@@ -4,16 +4,8 @@ const questionsDescription = document.querySelectorAll(
   '.questions__item-description'
 );
 
-let questionsHeight = 0;
-
-questionsDescription.forEach((elem) => {
-  if (questionsHeight < elem.scrollHeight) {
-    questionsHeight = elem.scrollHeight;
-  }
-});
-
 items.forEach((item, index) => {
-  questionsDescription[0].style.height = `${questionsHeight}px`;
+  questionsDescription[0].style.height = `${questionsDescription[0].scrollHeight}px`;
   item.addEventListener('click', (e) => {
     for (let i = 0; i < questions.length; i++) {
       if (index === i) {

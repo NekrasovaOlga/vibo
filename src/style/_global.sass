@@ -11,8 +11,9 @@ body
     width: 100%
     margin: 0 auto
     position: relative
-input
+input, textarea
     outline: none
+    border: none
 ul,li
     list-style: none
 a
@@ -65,3 +66,9 @@ button
         font-size: 22px
     .margin__bottom-100
         margin-bottom: 40px
+
+@media screen and (max-width:354px)
+    .content
+        max-width: 90%
+    .button
+        width: 90%

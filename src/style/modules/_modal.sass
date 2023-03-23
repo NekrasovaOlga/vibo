@@ -1,0 +1,90 @@
+.overflow
+    opacity: 0
+    height: 0
+    overflow: hidden
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 99
+    background: rgba(217, 217, 217, 0.35)
+    backdrop-filter: blur(8px)
+    transition: opacity 0.3s ease-in-out
+    &.active
+        opacity: 1
+        height: 100vh
+        .modal
+            position: absolute
+            left: 50%
+            top: 50%
+            transform: translate(-50%,-50%)
+            width: 354px
+            min-height: 408px
+            background: #F2F2F2
+            box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.14)
+            border-radius: 23px
+            padding: 70px 57px
+            &__title
+                font-weight: 400
+                font-size: 21px
+                text-align: center
+            &__button
+                width: 100%
+
+            &__phone
+                position: relative
+                display: block
+                &-link
+                    position: relative
+                    font-size: 21px
+                    padding-left: 51px
+                    line-height: 35px
+                    width: 100%
+                    display: inline-block
+                    text-align: right
+                    &::after
+                        position: absolute
+                        content: ''
+                        left: 0
+                        top: 0
+                        background: #FFE600 url(../img/phone.png) no-repeat
+                        background-position: center center
+                        border-radius: 50%
+                        width: 36px
+                        height: 36px
+                &-input
+                    width: 100%
+                    font-size: 15px
+                    padding: 24px 15px 24px 74px
+                    margin-top: 15px
+                    margin-bottom: 15px
+            &__icon
+                &::after
+                    left: 43px
+            &__close
+                cursor: pointer
+                position: absolute
+                right: 20px
+                top: 20px
+            &__description
+                color: #807F7F
+                text-align: center
+                margin: 15px 0
+            &__textarea
+                display: none
+                width: 240px
+                height: 80px
+                background: #FFFFFF
+                box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.07)
+                border-radius: 4px
+                margin-bottom: 15px
+                padding: 15px 20px
+                resize: none
+            &__social
+                margin-top: 15px
+                display: flex
+                justify-content: center
+                &-telegram
+                    margin-right: 22px
+            &__success
+                display: none

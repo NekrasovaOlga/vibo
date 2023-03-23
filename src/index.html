@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
-
+    <link rel="stylesheet" href="./css/style.css">
     <script type="module" src="index.js"></script>
 
 </head>
@@ -523,7 +523,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="button questions__button">
+                <button class="button questions__button" data-modal="question">
                     Задать другой вопрос
                 </button>
             </div>
@@ -602,7 +602,7 @@
                 <h2 class="title__h2 layout__title">
                     Скачайте планировку кабинетов и узнайте стоимость на долгосрочную аренду
                 </h2>
-                <button class="button">
+                <button class="button" data-modal="plane">
                     Скачать планировку
                 </button>
             </div>
@@ -648,6 +648,61 @@
             </div>
         </section>
     </main>
+
+    <div class="overflow active">
+        <div class="modal modal__contact">
+            <div class="modal__close">
+                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M28.5752 26.5089C28.8473 26.7845 29 27.1569 29 27.5449C29 27.933 28.8473 28.3053 28.5752 28.581C28.2982 28.8498 27.928 29 27.5427 29C27.1574 29 26.7871 28.8498 26.5101 28.581L14.5 16.5116L2.48988 28.581C2.21288 28.8498 1.84265 29 1.45734 29C1.07203 29 0.70179 28.8498 0.424793 28.581C0.152662 28.3053 0 27.933 0 27.5449C0 27.1569 0.152662 26.7845 0.424793 26.5089L12.453 14.4576L0.424793 2.40639C0.193701 2.12385 0.0756043 1.76517 0.0934729 1.4001C0.111341 1.03503 0.263898 0.689687 0.521468 0.431234C0.779039 0.172782 1.12321 0.0197036 1.48703 0.00177384C1.85085 -0.0161559 2.20831 0.102345 2.48988 0.334228L14.5 12.4036L26.5101 0.334228C26.7917 0.102345 27.1492 -0.0161559 27.513 0.00177384C27.8768 0.0197036 28.221 0.172782 28.4785 0.431234C28.7361 0.689687 28.8887 1.03503 28.9065 1.4001C28.9244 1.76517 28.8063 2.12385 28.5752 2.40639L16.547 14.4576L28.5752 26.5089Z"
+                        fill="black" />
+                </svg>
+
+            </div>
+            <h3 class="modal__title">
+                Оставьте ваши контакты, чтобы мы отправили планировку
+            </h3>
+            <form action="" class="modal__form">
+                <label for="phone" class="call__phone modal__phone">
+                    <input type="tel" name="phone" id="phone" placeholder="+7 (___) ___ - __ -__"
+                        class="call__phone-input modal__phone-input">
+                    <span class="call__icon modal__icon"></span>
+                </label>
+
+                <textarea class="modal__textarea" name="question" id="question"
+                    placeholder="Введите ваш вопрос"></textarea>
+                <button type="submit" class="button modal__button ">Отправить заявку</button>
+            </form>
+        </div>
+
+        <div class="modal modal__success">
+            <div class="modal__close">
+                <svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M28.5752 26.5089C28.8473 26.7845 29 27.1569 29 27.5449C29 27.933 28.8473 28.3053 28.5752 28.581C28.2982 28.8498 27.928 29 27.5427 29C27.1574 29 26.7871 28.8498 26.5101 28.581L14.5 16.5116L2.48988 28.581C2.21288 28.8498 1.84265 29 1.45734 29C1.07203 29 0.70179 28.8498 0.424793 28.581C0.152662 28.3053 0 27.933 0 27.5449C0 27.1569 0.152662 26.7845 0.424793 26.5089L12.453 14.4576L0.424793 2.40639C0.193701 2.12385 0.0756043 1.76517 0.0934729 1.4001C0.111341 1.03503 0.263898 0.689687 0.521468 0.431234C0.779039 0.172782 1.12321 0.0197036 1.48703 0.00177384C1.85085 -0.0161559 2.20831 0.102345 2.48988 0.334228L14.5 12.4036L26.5101 0.334228C26.7917 0.102345 27.1492 -0.0161559 27.513 0.00177384C27.8768 0.0197036 28.221 0.172782 28.4785 0.431234C28.7361 0.689687 28.8887 1.03503 28.9065 1.4001C28.9244 1.76517 28.8063 2.12385 28.5752 2.40639L16.547 14.4576L28.5752 26.5089Z"
+                        fill="black" />
+                </svg>
+
+            </div>
+            <h3 class="modal__title">
+                Спасибо, Ваша
+                заявка принята!
+            </h3>
+            <div class="modal__description">
+                Не хотите ждать? Наберите нам прямо сейчас
+            </div>
+
+            <a href="#" class="modal__phone-link">+7(495)545-44-83</a>
+            <div class="modal__social">
+                <a href="" class="modal__social-telegram">
+                    <img src="./img/telegram.png" alt="">
+                </a>
+                <a href="" class="modal__social-whatsapp">
+                    <img src="./img/whatsapp.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

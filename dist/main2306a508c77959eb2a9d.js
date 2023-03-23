@@ -40,6 +40,52 @@ __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerat
 
 /***/ }),
 
+/***/ "./src/script/modal.js":
+/*!*****************************!*\
+  !*** ./src/script/modal.js ***!
+  \*****************************/
+/***/ (() => {
+
+const modal = document.querySelector('.modal');
+const overflow = document.querySelector('.overflow');
+const buttonModalPlane = document.querySelector('[data-modal=plane]');
+const buttonModalQuestion = document.querySelector('[data-modal=question]');
+const modalTitle = document.querySelector('.modal__title');
+const formAll = document.querySelectorAll('form');
+const modalSuccess = overflow.querySelector('.modal__success');
+overflow.addEventListener('click', e => {
+  const target = e.target;
+  const textareaModal = document.querySelector('.modal__textarea');
+  textareaModal.style.display = 'none';
+  if (target.closest('.modal__close') || target.className.indexOf('overflow') > -1) {
+    modalSuccess.style.display = 'none';
+    overflow.classList.remove('active');
+  }
+});
+buttonModalPlane.addEventListener('click', e => {
+  modalTitle.textContent = 'Оставьте ваши контакты, чтобы мы отправили планировку';
+  overflow.classList.add('active');
+});
+buttonModalQuestion.addEventListener('click', e => {
+  const textareaModal = document.querySelector('.modal__textarea');
+  modalTitle.textContent = 'Не нашли ответ, задайте свой вопрос?';
+  textareaModal.style.display = 'block';
+  overflow.classList.add('active');
+});
+formAll.forEach(form => {
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    console.log(e.target);
+    if (e.target.closest('.modal__contact')) {
+      e.target.closest('.modal__contact').style.display = 'none';
+    }
+    overflow.classList.add('active');
+    modalSuccess.style.display = 'block';
+  });
+});
+
+/***/ }),
+
 /***/ "./src/script/script.js":
 /*!******************************!*\
   !*** ./src/script/script.js ***!
@@ -49,14 +95,8 @@ __webpack_require__(/*! regenerator-runtime/runtime */ "./node_modules/regenerat
 const items = document.querySelectorAll('.questions__item-title');
 const questions = document.querySelectorAll('.questions__item');
 const questionsDescription = document.querySelectorAll('.questions__item-description');
-let questionsHeight = 0;
-questionsDescription.forEach(elem => {
-  if (questionsHeight < elem.scrollHeight) {
-    questionsHeight = elem.scrollHeight;
-  }
-});
 items.forEach((item, index) => {
-  questionsDescription[0].style.height = `${questionsHeight}px`;
+  questionsDescription[0].style.height = `${questionsDescription[0].scrollHeight}px`;
   item.addEventListener('click', e => {
     for (let i = 0; i < questions.length; i++) {
       if (index === i) {
@@ -98,7 +138,8 @@ $('.reviews__slider').slick({
     settings: {
       slidesToShow: 1,
       slidesToScroll: 1,
-      infinite: false
+      infinite: false,
+      centerMode: true
     }
   }]
 });
@@ -118,7 +159,8 @@ $('.price__block').slick({
     settings: {
       slidesToShow: 1,
       slidesToScroll: 1,
-      infinite: false
+      infinite: false,
+      centerMode: true
     }
   }]
 });
@@ -9181,19 +9223,6 @@ module.exports = __webpack_require__(/*! ../modules/_core */ "./node_modules/cor
 
 /***/ }),
 
-/***/ "./src/style/style.sass":
-/*!******************************!*\
-  !*** ./src/style/style.sass ***!
-  \******************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./node_modules/regenerator-runtime/runtime.js":
 /*!*****************************************************!*\
   !*** ./node_modules/regenerator-runtime/runtime.js ***!
@@ -10061,11 +10090,14 @@ _global["default"]._babelPolyfill = true;
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _style_style_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/style.sass */ "./src/style/style.sass");
-/* harmony import */ var _script_script_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script/script.js */ "./src/script/script.js");
-/* harmony import */ var _script_script_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_script_js__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _script_slider_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./script/slider.js */ "./src/script/slider.js");
-/* harmony import */ var _script_slider_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_script_slider_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _script_script_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./script/script.js */ "./src/script/script.js");
+/* harmony import */ var _script_script_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_script_script_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _script_slider_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./script/slider.js */ "./src/script/slider.js");
+/* harmony import */ var _script_slider_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_script_slider_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _script_modal_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./script/modal.js */ "./src/script/modal.js");
+/* harmony import */ var _script_modal_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_script_modal_js__WEBPACK_IMPORTED_MODULE_2__);
+//import './style/style.sass';
+
 
 
 
@@ -10073,4 +10105,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=mainfbdb5d48fc0083dab200.js.map
+//# sourceMappingURL=main2306a508c77959eb2a9d.js.map
